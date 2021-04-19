@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_04_19_132516) do
     t.integer "year"
     t.string "city"
     t.text "description"
+    t.integer "price_per_day"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

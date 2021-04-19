@@ -1,0 +1,14 @@
+<div class="card-trip">
+  <img src="https://media.autoexpress.co.uk/image/private/s--l9NxPLCP--/v1586268650/autoexpress/2020/04/Porsche%20911%20Turbo%20S%20Cabriolet.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <% @cars.each do |car| %>
+      <h2><%= car.title %></h2>
+      <p><%= car.description %></p>
+      <% end %>
+    </div>
+
+    <h2 class="card-trip-pricing">99.99/car.price_per_day</h2>
+
+  </div>
+</div>
