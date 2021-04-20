@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= simple_form_for [ @user, @car ] do |f| %>
+        <%= f.input :title %>
+        <%= f.input :model %>
+        <%= f.input :year %>
+        <%= f.input :city %>
+        <%= f.input :description %>
+        <%= f.input :price %>
+        <%= f.input :photo %>
+        <%= f.submit "Save it!", class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
