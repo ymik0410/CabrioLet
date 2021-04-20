@@ -1,0 +1,50 @@
+<div class="position-relative">
+  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://media.autoexpress.co.uk/image/private/s--l9NxPLCP--/v1586268650/autoexpress/2020/04/Porsche%20911%20Turbo%20S%20Cabriolet.jpg')">
+  </div>
+</div>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="car-show-card">
+        <h1><%= @car.title %></h1>
+        <p class="car-show-city"><%= @car.model %></p>
+      </div>
+      <div class="car-show-card">
+        <h3>A bit more about this car...</h3>
+        <p><%= @car.description %></p>
+        <p>Year: <%= @car.year %></p>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="car-show-card">
+        <h5>Book this car!</h5>
+            <form action="">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">From:</span>
+            <input type="text" class="form-control" placeholder="25/04/2021" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-addon" id="basic-addon1">To:</span>
+            <input type="text" class="form-control" placeholder="26/04/2021" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+      </div>
+      <div class="car-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+            <p>Location: <%= @car.city %></p>
+          </div>
+          <div class="flex ml-3">
+            <p>CHF <%= @car.price %></p>
+          </div>
+        </div>
+      </div>
+      <div class="car-show-card">
+        <div class="flex-align">
+          </div>
+      </div>
+    </div>
+  </div>
