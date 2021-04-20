@@ -15,11 +15,11 @@ User.destroy_all
       cars = Car.create!(
       title: Faker::TvShows::Friends.character,
       model: Faker::Book.title,
-      year: 2002,
-      city: "Zug",
-      # price: 100,
-      # photo: "https://media.autoexpress.co.uk/image/private/s--l9NxPLCP--/v1586268650/autoexpress/2020/04/Porsche%20911%20Turbo%20S%20Cabriolet.jpg",
-      description: "Drive with style!",
+      year: rand(1998..2021),
+      city:["Zug", "Zurich", "Paris", "Luzern"].sample,
+      price: rand(100..500),
+      photo: "https://media.autoexpress.co.uk/image/private/s--l9NxPLCP--/v1586268650/autoexpress/2020/04/Porsche%20911%20Turbo%20S%20Cabriolet.jpg",
+      description: Faker::TvShows::FinalSpace.vehicle,
       user: user
     )
     end
