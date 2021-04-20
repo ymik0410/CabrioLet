@@ -1,4 +1,6 @@
 require "faker"
+require 'open-uri'
+require 'nokogiri'
 
 puts "cleaning DB"
 Car.destroy_all
@@ -27,3 +29,4 @@ User.destroy_all
 end
 
 puts "created #{User.count} users."
+
