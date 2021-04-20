@@ -3,7 +3,7 @@
 <% @cars.each do |car| %>
  <!--  <div class="co-12 colsm-6 col-md-4"> -->
     <div class="card-trip">
-      <img src="https://media.autoexpress.co.uk/image/private/s--l9NxPLCP--/v1586268650/autoexpress/2020/04/Porsche%20911%20Turbo%20S%20Cabriolet.jpg" />
+     <div class="car-card-image" style="background-image: url('<%= car.photo %>')"></div>
       <div class="card-trip-infos">
         <div>
           <h2><%= car.title %></h2>
@@ -11,7 +11,7 @@
         </div>
         <h2 class="card-trip-pricing"><%= car.price %>CHF</h2>
       </div>
-      <%= link_to 'Details', car_path(car.id), class: 'btn btn-dark btn-left m-0'%>
+      <%= link_to 'Details', car_path(car.id), class: 'btn btn-dark btn-left m-3'%>
     </div>
   <% end %>
 </div>
