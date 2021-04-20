@@ -1,0 +1,12 @@
+.btn {
+  border-color: green;
+  border-radius: 5px;
+}
+
+.btn a {
+  color: white;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
