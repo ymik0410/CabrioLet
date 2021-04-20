@@ -25,3 +25,5 @@ User.destroy_all
     end
 
 end
+
+puts "created #{User.count} users."
