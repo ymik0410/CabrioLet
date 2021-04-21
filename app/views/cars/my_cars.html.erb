@@ -1,0 +1,17 @@
+<div class="cards col-12 col-sm-6 mb-4">
+
+<% @cars.each do |car| %>
+ <!--  <div class="co-12 colsm-6 col-md-4"> -->
+    <div class="card-trip">
+     <div class="car-card-image" style="background-image: url('<%= car.photo %>')"></div>
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= car.title %></h2>
+          <p><%= car.description %></p>
+        </div>
+        <h2 class="card-trip-pricing"><%= car.price %>CHF</h2>
+      </div>
+      <%= link_to 'Details', car_path(car.id), class: 'btn btn-dark btn-left m-3'%>
+    </div>
+  <% end %>
+</div>
