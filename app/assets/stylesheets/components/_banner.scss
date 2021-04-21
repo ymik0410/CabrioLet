@@ -1,15 +1,17 @@
 .banner {
+  width:100%;
+
   background-size: cover;
-  background-position: center;
-  height: 85vh;
+  background-position: 30% 70%;
+  height: 76vh;
   color: white;
   text-align: center;
 
   h1 {
   color: white;
   text-align: center;
-  padding-top: 28vh;
-  text-shadow: 2px 2px lightgrey;
+  padding-top: 10vh;
+  text-shadow: 1px 1px lightgrey;
   }
 
 }

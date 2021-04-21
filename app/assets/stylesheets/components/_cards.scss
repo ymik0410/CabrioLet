@@ -1,11 +1,20 @@
+.content {
+  display: flex;
+}
+
 .cards {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   padding: 16px;
 }
 
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
 
 .card-trip {
   overflow: hidden;
@@ -21,6 +30,7 @@
   object-fit: cover;
 }
 
+
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
@@ -35,7 +45,7 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -100,14 +110,10 @@
   color: #333;
 }
 
-.map {
-  height: 350px;
-  background-position: center;
-  background-size: cover;
-}
 .flex {
   display: flex;
 }
+
 .flex-align {
   display: flex;
   align-items: center;
@@ -119,3 +125,22 @@
   background-position: center;
   background-size: cover;
 }
+
+// .test-color:link {
+//   color: #333333;
+// }
+// .test-color:visited {
+  // color: #FFFFFF;
+// }
+.test-color a {
+  color:  black;
+
+  &:hover {
+    text-decoration: none;
+    color: rgb(232,75,78);
+  }
+
+}
+// .test-color:active {
+//   color: #333333;
+// }
