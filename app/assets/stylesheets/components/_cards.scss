@@ -6,7 +6,6 @@
   padding: 16px;
 }
 
-
 .card-trip {
   overflow: hidden;
   background: white;
@@ -20,6 +19,7 @@
   // width: 100%;
   object-fit: cover;
 }
+
 
 .card-trip h2 {
   font-size: 16px;
@@ -35,7 +35,7 @@
 
 
 .card-trip .card-trip-infos {
-  padding: 16px;
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -119,3 +119,16 @@
   background-position: center;
   background-size: cover;
 }
+
+// .test-color:link {
+//   color: #333333;
+// }
+// .test-color:visited {
+  // color: #FFFFFF;
+// }
+.test-color:hover {
+  color: red;
+}
+// .test-color:active {
+//   color: #333333;
+// }
