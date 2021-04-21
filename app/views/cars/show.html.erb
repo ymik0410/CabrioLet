@@ -1,6 +1,14 @@
 <div class="position-relative">
-  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= @car.photo %>')">
+  <div class="card-category card-large" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+
+    <% if @car.picture.attached? %>
+        url('<%= cl_image_path @car.picture.key %>')
+        <% else %>
+        url('<%= @car.photo %>')
+       <% end %>
+    ">
   </div>
+
 </div>
 <div class="container margin-top-negative">
   <div class="row">

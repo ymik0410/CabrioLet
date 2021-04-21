@@ -1,4 +1,5 @@
 class Car < ApplicationRecord
+  has_one_attached :picture
   belongs_to :user
   validates :title, :model, :year, :city, :description, :price, presence: true
   geocoded_by :city
