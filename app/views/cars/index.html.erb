@@ -6,13 +6,12 @@
       <div class="card-trip">
        <div class="car-card-image" style="background-image: url('<%= car.photo %>')"></div>
         <div class="card-trip-infos">
-          <div>
-            <h2><%= car.title %></h2>
-            <p><%= car.description %></p>
-          </div>
+          <h2 class="test-color"><%= link_to car.title, car_path(car.id) %></h2>
           <h2 class="card-trip-pricing"><%= car.price %>CHF</h2>
         </div>
-        <%= link_to 'Details', car_path(car.id), class: 'btn btn-dark btn-left m-3'%>
+        <div class="card-trip-infos">
+          <p><%= car.description %></p>
+        </div>
       </div>
     <% end %>
   </div>
@@ -22,4 +21,3 @@
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
-
