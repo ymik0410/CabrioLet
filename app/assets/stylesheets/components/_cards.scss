@@ -126,8 +126,14 @@
 // .test-color:visited {
   // color: #FFFFFF;
 // }
-.test-color:hover {
-  color: red;
+.test-color a {
+  color:  black;
+
+  &:hover {
+    text-decoration: none;
+    color: rgb(232,75,78);
+  }
+
 }
 // .test-color:active {
 //   color: #333333;
