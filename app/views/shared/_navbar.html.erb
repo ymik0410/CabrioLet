@@ -17,8 +17,10 @@
         <li class="nav-item dropdown">
           <%= image_tag "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGKY5IgTfqgNA0__Z1YZ_lcdaQmEHvnjfMPg&usqp=CAU", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <!--   <%= link_to "My cars", "#", class: "dropdown-item" %> -->
-            <%= link_to "Add a new car", new_car_path, class: "dropdown-item" %>
+
+            <%= link_to "My cars", my_cars_cars_path, class: "dropdown-item" %>
+            <%= link_to "Add new car", new_car_path, class: "dropdown-item" %>
+
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
