@@ -1,9 +1,19 @@
+.content {
+  display: flex;
+}
+
 .cards {
   flex-grow: 1;
   display: grid;
-  grid-template-columns: 4fr 4fr 4fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   padding: 16px;
+}
+
+#map {
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
 
 .card-trip {
@@ -100,14 +110,10 @@
   color: #333;
 }
 
-.map {
-  height: 350px;
-  background-position: center;
-  background-size: cover;
-}
 .flex {
   display: flex;
 }
+
 .flex-align {
   display: flex;
   align-items: center;
