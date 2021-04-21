@@ -28,7 +28,11 @@
             <span class="input-group-addon" id="basic-addon1">To:</span>
             <input type="text" class="form-control" placeholder="26/04/2021" aria-label="Username" aria-describedby="basic-addon1">
           </div>
-          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+          <%if user_signed_in? %>
+            <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+          <% else  %>
+            <%= link_to "Book", new_user_session_path, class: "btn btn-success mt-2", style:"width: 100%" %>
+          <% end %>
         </form>
       </div>
       <div class="car-show-card">
@@ -36,3 +40,8 @@
       </div>
     </div>
   </div>
+
+
+<p>logged in</p>
+
+<p>not</p>
