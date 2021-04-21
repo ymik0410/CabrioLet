@@ -10,9 +10,9 @@
         <p class="car-show-city"><%= @car.model %></p>
       </div>
       <div class="car-show-card">
-        <h3>A bit more about this car...</h3>
         <p><%= @car.description %></p>
         <p>Year: <%= @car.year %></p>
+        <p>Location: <%= @car.city %></p>
       </div>
     </div>
 
@@ -32,15 +32,7 @@
         </form>
       </div>
       <div class="car-show-card">
-        <h3>Details</h3>
-        <div class="flex">
-          <div class="flex">
-            <p>Location: <%= @car.city %></p>
-          </div>
-          <div class="flex ml-3">
-            <p>CHF <%= @car.price %></p>
-          </div>
-        </div>
+        <h3 class="flex-align"><span>Price per day</span><span>CHF <%= @car.price %></span></h3>
       </div>
     </div>
   </div>
