@@ -137,12 +137,6 @@
   background-size: cover;
 }
 
-// .test-color:link {
-//   color: #333333;
-// }
-// .test-color:visited {
-  // color: #FFFFFF;
-// }
 .test-color a {
   color:  black;
 
@@ -152,9 +146,6 @@
   }
 
 }
-// .test-color:active {
-//   color: #333333;
-// }
 
 
 .card-trip-1 .card-trip-infos-1 {
@@ -199,4 +190,12 @@
   width: 40px;
 }
 
+.search {
+  margin: 16px 16px 0 16px;
+  justify-content: flex-start;
+  display: flex;
+}
 
+.form-input {
+  flex-grow: 1;
+}
