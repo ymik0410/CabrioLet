@@ -137,12 +137,6 @@
   background-size: cover;
 }
 
-// .test-color:link {
-//   color: #333333;
-// }
-// .test-color:visited {
-  // color: #FFFFFF;
-// }
 .test-color a {
   color:  black;
 
@@ -152,6 +146,56 @@
   }
 
 }
-// .test-color:active {
-//   color: #333333;
-// }
+
+
+.card-trip-1 .card-trip-infos-1 {
+  padding: 20px;
+  display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  // position: relative;
+}
+
+
+.card-trip-1 {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 400px;
+  position: relative;
+}
+
+.card-trip-1 > img {
+  height: 200px;
+  // width: 100%;
+  object-fit: cover;
+}
+
+
+.card-trip-1 h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip-1 p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+.card-trip-infos-1 .card-trip-user-1 {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+.search {
+  margin: 16px 16px 0 16px;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.form-input {
+  flex-grow: 1;
+}

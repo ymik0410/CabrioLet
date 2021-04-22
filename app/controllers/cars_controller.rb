@@ -2,7 +2,12 @@ class CarsController < ApplicationController
   before_action :set_car, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cars = Car.all
+    if params[:query].present?
+      @cars = Car.search(params[:query])
+    else
+      @cars = Car.all
+    end
+
     @markers = @cars.geocoded.map do |car|
       {
         lat: car.latitude,
@@ -14,10 +19,11 @@ class CarsController < ApplicationController
   end
 
   def my_cars
-    @cars = Car.where(user_id: current_user)
+    @cars = Car.where(user: current_user)
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
