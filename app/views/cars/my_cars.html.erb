@@ -1,17 +1,23 @@
-<div class="cards col-12 col-sm-6 mb-4">
-
-<% @cars.each do |car| %>
- <!--  <div class="co-12 colsm-6 col-md-4"> -->
-    <div class="card-trip">
-     <div class="car-card-image" style="background-image: url('<%= car.photo %>')"></div>
-      <div class="card-trip-infos">
-        <div>
-          <h2><%= car.title %></h2>
+  <div class="cards-my">
+    <% @cars.each do |car| %>
+   <!--  <div class="co-12 colsm-6 col-md-4"> -->
+      <div class="card-trip">
+       <div class="car-card-image" style="background-image: url('<%= car.photo %>')"></div>
+        <div class="card-trip-infos">
+          <h2 class="test-color"><%= link_to car.title, car_path(car.id) %></h2>
+          <h2 class="card-trip-pricing"><%= car.price %>CHF</h2>
+        </div>
+        <div class="card-trip-infos">
           <p><%= car.description %></p>
         </div>
-        <h2 class="card-trip-pricing"><%= car.price %>CHF</h2>
+
+  <%= link_to 'Edit', edit_car_path(car), class: 'ml-3 text-warning' %>
+    <%= link_to "Remove", car_path(car),
+                 method: :delete,
+                 data: { confirm: "Are you sure?" },
+                 class: 'ml-3 text-danger'
+    %>
       </div>
-      <%= link_to 'Details', car_path(car.id), class: 'btn btn-dark btn-left m-3'%>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+
+
