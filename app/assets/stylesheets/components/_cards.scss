@@ -10,6 +10,15 @@
   padding: 16px;
 }
 
+.cards-my {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 16px;
+
+}
+
 #map {
   height: 100vh;
   position: sticky;
@@ -59,6 +68,8 @@
   width: 40px;
 }
 
+
+
 @media(max-width: 992px) {
   .cards {
     grid-template-columns: 1fr 1fr;
@@ -98,7 +109,7 @@
 }
 
 .margin-top-negative {
-  margin-top: -75px;
+  margin-top: -25px;
 }
 .no-mb {
   margin-bottom: 0;
