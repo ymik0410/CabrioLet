@@ -14,10 +14,11 @@ class CarsController < ApplicationController
   end
 
   def my_cars
-    @cars = Car.where(user_id: current_user)
+    @cars = Car.where(user: current_user)
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new

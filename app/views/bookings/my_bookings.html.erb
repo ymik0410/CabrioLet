@@ -1,0 +1,26 @@
+<h1>Here are my bookings</h1>
+
+<div class="content">
+  <div class="cards-my">
+    <% @bookings.each do |booking| %>
+   <!--  <div class="co-12 colsm-6 col-md-4"> -->
+      <div class="card-trip-1">
+       <div class="car-card-image"
+       <% if booking.car.picture.attached? %>
+        style="background-image: url('<%= cl_image_path car.picture.key %>')"
+        <% else %>
+        style="background-image: url('<%= booking.car.photo %>')"
+       <% end %>
+       ></div>
+        <div class="card-trip-infos-1">
+          <h2>Car: <%= booking.car.model %> </h2>
+          <h2>Start date: <%= booking.start_date %></h2>
+          <h2>End date: <%= booking.end_date %></h2>
+
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
