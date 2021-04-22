@@ -10,6 +10,7 @@ class Car < ApplicationRecord
 
 
 
+
   def unavailable_dates
     bookings.pluck(:start_date, :end_date).map do |range|
       { from: range[0], to: range[1] }
@@ -22,6 +23,5 @@ class Car < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
-
 
 end

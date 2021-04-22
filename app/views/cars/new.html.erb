@@ -2,12 +2,12 @@
   <div class="row justify-content-center">
     <div class="col-6">
       <%= simple_form_for [ @user, @car ] do |f| %>
-        <%= f.input :title %>
-        <%= f.input :model %>
-        <%= f.input :year %>
-        <%= f.input :city %>
-        <%= f.input :description %>
-        <%= f.input :price %>
+        <%= f.input :title,  :placeholder => 'Title of your advert' %>
+        <%= f.input :model, :placeholder => 'Make and model of your convertible car' %>
+        <%= f.input :year, :placeholder => "2012" %>
+        <%= f.input :city, :placeholder => 'Location of your car' %>
+        <%= f.input :description, :placeholder => 'A few facts about your car' %>
+        <%= f.input :price, :placeholder => 'Price per day'%>
         <%= f.input :picture, as: :file %>
         <%= f.submit "Save it!", class: "btn btn-success" %>
       <% end %>
