@@ -6,6 +6,9 @@ class Car < ApplicationRecord
   geocoded_by :city
   after_validation :geocode, if: :will_save_change_to_city?
 
+  has_many :reviews, dependent: :destroy
+
+
 
   def unavailable_dates
     bookings.pluck(:start_date, :end_date).map do |range|
@@ -19,5 +22,6 @@ class Car < ApplicationRecord
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
+
 
 end
