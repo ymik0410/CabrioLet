@@ -152,6 +152,13 @@
   }
 
 }
-// .test-color:active {
-//   color: #333333;
-// }
+
+.search {
+  margin: 16px 16px 0 16px;
+  justify-content: flex-start;
+  display: flex;
+}
+
+.form-input {
+  flex-grow: 1;
+}
