@@ -29,7 +29,12 @@
             <%= simple_form_for([@car, @booking]) do |f| %>
               <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"}  %>
               <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"}  %>
-              <%= f.submit "Book", class: "btn btn-primary" %>
+              <%if user_signed_in? %>
+                <%= f.submit "Book", class: "btn btn-primary" %>
+              <% else  %>
+                <%= link_to "Book", new_user_session_path, class: "btn btn-success mt-2", style:"width: 100%" %>
+              <% end %>
+
            <% end %>
       </div>
     </div>
