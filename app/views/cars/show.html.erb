@@ -23,10 +23,22 @@
         <p>Location: <%= @car.city %></p>
       </div>
     </div>
-
     <div class="col-4">
       <div class="car-show-card">
-        <h5>Book this car!</h5>
+        <div id='car-booking-dates'>
+            <%= simple_form_for([@car, @booking]) do |f| %>
+              <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"}  %>
+              <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"}  %>
+              <%= f.submit "Book", class: "btn btn-primary" %>
+           <% end %>
+      </div>
+    </div>
+
+
+    <!-- <div class="col-4">
+      <div class="car-show-card">
+
+        <!-- <h5>Book this car!</h5>
             <form action="">
           <div class="input-group">
             <span class="input-group-addon" id="basic-addon1">From:</span>
@@ -41,8 +53,8 @@
           <% else  %>
             <%= link_to "Book", new_user_session_path, class: "btn btn-success mt-2", style:"width: 100%" %>
           <% end %>
-        </form>
-      </div>
+        </form> -->
+      <!-- </div> -->
       <div class="car-show-card">
         <h3 class="flex-align"><span>Price per day</span><span>CHF <%= @car.price %></span></h3>
       </div>
