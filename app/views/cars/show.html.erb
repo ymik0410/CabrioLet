@@ -4,7 +4,7 @@
     <% if @car.picture.attached? %>
         url('<%= cl_image_path @car.picture.key %>')
         <% else %>
-        url(<%= asset_path('no_image.jpg') %>)
+        url('<%= @car.photo %>')
        <% end %>
     ">
   </div>
