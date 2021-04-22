@@ -2,7 +2,11 @@
     <% @cars.each do |car| %>
    <!--  <div class="co-12 colsm-6 col-md-4"> -->
       <div class="card-trip">
-       <div class="car-card-image" style="background-image: url('<%= car.photo %>')"></div>
+        <% if car.picture.attached? %>
+          <div class="car-card-image" style="background-image: url('<%= cl_image_path car.picture.key %>')"></div>
+        <% else %>
+          <div class="car-card-image" style="background-image: url('https://cas01.autoscout24.ch/eurotax/10/P/p0557439.jpg')"></div>
+        <% end %>
         <div class="card-trip-infos">
           <h2 class="test-color"><%= link_to car.title, car_path(car.id) %></h2>
           <h2 class="card-trip-pricing"><%= car.price %>CHF</h2>
