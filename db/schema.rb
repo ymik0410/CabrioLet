@@ -68,6 +68,7 @@ ActiveRecord::Schema.define(version: 2021_04_22_172445) do
     t.bigint "car_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "rating"
     t.index ["car_id"], name: "index_reviews_on_car_id"
   end
 
