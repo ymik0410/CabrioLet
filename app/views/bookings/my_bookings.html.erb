@@ -18,6 +18,7 @@
           <h4>Start date: <%= booking.start_date %></h4>
           <h4>End date: <%= booking.end_date %></h4>
           <h4><strong>TOTAL: <%= (booking.end_date - booking.start_date).to_i*booking.car.price %> CHF</strong></h4>
+          <%= link_to "Add a review", new_car_review_path(booking.car), class: "btn btn-success mt-2", style:"width: 200px" %>
         </div>
       </div>
     </div>
