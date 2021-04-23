@@ -34,3 +34,4 @@ end
 
 
 puts "created #{User.count} users."
+
