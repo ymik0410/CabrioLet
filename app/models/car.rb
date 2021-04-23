@@ -16,7 +16,7 @@ class Car < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search,
-    against: [:title, :model, :description, :year],
+    against: [:title, :model, :description, :year, :city],
     using: {
       tsearch: { prefix: true } # <-- now `superman batm` will return something!
     }
