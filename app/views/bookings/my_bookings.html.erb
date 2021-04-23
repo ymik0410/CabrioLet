@@ -1,28 +1,25 @@
+<div class="wrapper">
+  <div class="container mt-4">
+  <h1>Welcome to your bookings, <%= current_user.first_name %> </h1>
 
-<h1>Welcome to your bookings, <%= current_user.first_name %> </h1>
+  </div>
 
-
-<div class="content">
-  <div class="cards-my">
-    <% @bookings.each do |booking| %>
-   <!--  <div class="co-12 colsm-6 col-md-4"> -->
-      <div class="card-trip-1">
-       <div class="car-card-image"
-       <% if booking.car.picture.attached? %>
-        style="background-image: url('<%= cl_image_path car.picture.key %>')"
+  <% @bookings.each do |booking| %>
+    <div class="container">
+      <div class="card-product">
+        <% if booking.car.picture.attached? %>
+          <%= cl_image_tag booking.car.picture.key %>
         <% else %>
-        style="background-image: url('<%= booking.car.photo %>')"
-       <% end %>
-       ></div>
-        <div class="card-trip-infos-1">
-          <h2>Car: <%= booking.car.model %> </h2>
-          <h2>Start date: <%= booking.start_date %></h2>
-          <h2>End date: <%= booking.end_date %></h2>
+          <%= image_tag booking.car.photo %>
+        <% end %>
 
+        <div class="card-product-infos">
+          <h2>Car: <%= booking.car.model %> </h2>
+          <h4>Start date: <%= booking.start_date %></h4>
+          <h4>End date: <%= booking.end_date %></h4>
+          <h4><strong>TOTAL: <%= (booking.end_date - booking.start_date).to_i*booking.car.price %> CHF</strong></h4>
         </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
 </div>
-
-
