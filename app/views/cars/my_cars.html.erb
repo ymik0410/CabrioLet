@@ -1,15 +1,15 @@
-
-<h1>Welcome to your cars page, <%= current_user.first_name %>! </h1>
-
 <div class="wrapper">
-  <div class="cards-my">
-    <% @cars.each do |car| %>
-   <!--  <div class="co-12 colsm-6 col-md-4"> -->
+  <div class="container">
+    <h1>Welcome to your cars page, <%= current_user.first_name %>! </h1>
+
+    <div class="cards-my">
+      <% @cars.each do |car| %>
+       <!--  <div class="co-12 colsm-6 col-md-4"> -->
       <div class="card-trip">
-        <% if car.picture.attached? %>
-          <div class="car-card-image" style="background-image: url('<%= cl_image_path car.picture.key %>')"></div>
-        <% else %>
-          <div class="car-card-image" style="background-image: url('<%= car.photo %>')"></div>
+      <% if car.picture.attached? %>
+        <div class="car-card-image" style="background-image: url('<%= cl_image_path car.picture.key %>')"></div>
+      <% else %>
+        <div class="car-card-image" style="background-image: url('<%= car.photo %>')"></div>
         <% end %>
         <div class="card-trip-infos">
           <h2 class="test-color"><%= link_to car.title, car_path(car.id) %></h2>
@@ -19,13 +19,14 @@
           <p><%= car.description %></p>
         </div>
 
-  <%= link_to 'Edit', edit_car_path(car), class: 'ml-3 text-warning' %>
-    <%= link_to "Remove", car_path(car),
-                 method: :delete,
-                 data: { confirm: "Are you sure?" },
-                 class: 'ml-3 text-danger'
-    %>
-      </div>
-    <% end %>
+        <%= link_to 'Edit', edit_car_path(car), class: 'ml-3 text-warning' %>
+        <%= link_to "Remove", car_path(car),
+                     method: :delete,
+                     data: { confirm: "Are you sure?" },
+                     class: 'ml-3 text-danger'
+        %>
+        </div>
+        <% end %>
+    </div>
+  </div>
 </div>
-

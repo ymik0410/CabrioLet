@@ -10,7 +10,7 @@
   h1 {
   color: white;
   text-align: center;
-  padding-top: 10vh;
+  padding-top: 16vh;
   text-shadow: 1px 1px lightgrey;
   }
 
@@ -19,4 +19,8 @@
 
 .home {
   background-image: asset-url('banner.jpg');
+}
+
+.banner h1 {
+  font-size: 50px;
 }
